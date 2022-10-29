@@ -9,9 +9,21 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
       home: Scaffold(
-        body: Profile(),
+        body: const Profile(),
+        floatingActionButton: SizedBox(
+          width: 80,
+          child: FittedBox(
+            child: FloatingActionButton(
+              onPressed: () {},
+              child: const Icon(Icons.phone),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -88,7 +100,7 @@ class Profile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: IconButton(
-        onPressed: (){},
+        onPressed: () {},
         icon: Icon(
           icon,
           color: Colors.indigo,
